@@ -1,2 +1,10 @@
-package com.settlement.dataharvester.domain.entity;public class UserStatus {
+package com.settlement.dataharvester.domain.entity;
+
+public enum UserStatus {
+
+    ACTIVE;
+
+    public static UserStatus getDefaultStatus() {
+        return ACTIVE;
+    }
 }

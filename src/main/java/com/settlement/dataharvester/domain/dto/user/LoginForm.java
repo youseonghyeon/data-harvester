@@ -1,2 +1,12 @@
-package com.settlement.dataharvester.domain.dto.user;public class LoginForm {
+package com.settlement.dataharvester.domain.dto.user;
+
+import lombok.Data;
+
+@Data
+public class LoginForm {
+
+    private String username;
+
+    private String password;
+
 }
