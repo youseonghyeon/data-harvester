@@ -1,25 +1,33 @@
 package com.settlement.dataharvester.domain.dto.payment;
 
+import com.settlement.dataharvester.domain.entity.PaymentMethod;
 import com.settlement.dataharvester.domain.entity.PaymentStatus;
+import jakarta.validation.constraints.NotEmpty;
 import lombok.Data;
 
 import java.time.LocalDateTime;
-import java.util.UUID;
 
 @Data
 public class PaymentForm {
 
+    @NotEmpty
     private Long productId;
 
+    @NotEmpty
     private long paymentAmount;
 
-    private PaymentStatus paymentMethod;
+    @NotEmpty
+    private PaymentMethod paymentMethod;
 
+    @NotEmpty
     private LocalDateTime paymentDatetime;
 
-    private String paymentStatus;
+    @NotEmpty
+    private PaymentStatus paymentStatus;
 
-    private UUID sellerId;
+    @NotEmpty
+    private Long sellerId;
 
-    private UUID buyerId;
+    @NotEmpty
+    private Long buyerId;
 }

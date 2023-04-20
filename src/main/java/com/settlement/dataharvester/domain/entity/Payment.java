@@ -20,16 +20,16 @@ public class Payment {
     private long paymentAmount;
 
     @Enumerated(EnumType.STRING)
-    private PaymentStatus paymentMethod;
+    private PaymentMethod paymentMethod;
 
     private LocalDateTime paymentDatetime;
+    @Enumerated(EnumType.STRING)
+    private PaymentStatus paymentStatus;
 
-    private String paymentStatus;
+    private Long sellerId;
+    private Long buyerId;
 
-    private UUID sellerId;
-    private UUID buyerId;
-
-    public Payment(Long productId, long paymentAmount, PaymentStatus paymentMethod, LocalDateTime paymentDatetime, String paymentStatus, UUID sellerId, UUID buyerId) {
+    public Payment(Long productId, long paymentAmount, PaymentMethod paymentMethod, LocalDateTime paymentDatetime, PaymentStatus paymentStatus, Long sellerId, Long buyerId) {
         this.productId = productId;
         this.paymentAmount = paymentAmount;
         this.paymentMethod = paymentMethod;
